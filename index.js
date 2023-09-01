@@ -7,121 +7,121 @@
 // let firstCard = getRandomCard()
 // let secondCard = getRandomCard()
 // let sum = firstCard + secondCard
-let cards = []
-let sum = 0 
-let hasBlackJack = false
-//* Write the conditional according to these rules:
-//* 1. Create a variable called isAlive and assign it to true
-let isAlive = false
-//* 1. Declare a variable called message and assign its value to an empty string
-let message = ""
-//*Creating array render out all the cards
-// let cards = [firstCard, secondCard,] //* array - ordered list of items
-//* 2. Reassign the message variable to the string  we're logging out 
-message = "we're logging out"
-// * 2. Flip its value to false in the appropriate code block+
+// let cards = []
+// let sum = 0 
+// let hasBlackJack = false
+// //* Write the conditional according to these rules:
+// //* 1. Create a variable called isAlive and assign it to true
+// let isAlive = false
+// //* 1. Declare a variable called message and assign its value to an empty string
+// let message = ""
+// //*Creating array render out all the cards
+// // let cards = [firstCard, secondCard,] //* array - ordered list of items
+// //* 2. Reassign the message variable to the string  we're logging out 
+// message = "we're logging out"
+// // * 2. Flip its value to false in the appropriate code block+
 
-// * if less than or equal to 20  -> "Do you want to draw a new card?"
-// * else if exactly 21 -> "Whoo! You've got Blackjack"
-// * else -> "You're out of the game!"
+// // * if less than or equal to 20  -> "Do you want to draw a new card?"
+// // * else if exactly 21 -> "Whoo! You've got Blackjack"
+// // * else -> "You're out of the game!"
 
-// * 1. Store the message-el paragraph in a variable called message
-let messageEl = document.getElementById("message-el")
-// console.log(messageEl)
-//* 2. Store the sum paragraph in a variable called sumEl
-//let sumEl = document.getElementById("sum-el")
-let sumEl = document.querySelector(".sum-el")
-//* 2.Store the cards paragraph in a variable called cardsEl
-let cardsEl = document.getElementById("cards-el")
-//* Log it out the check that you're doing it right
-// console.log(isAlive)
-// console.log(cards)
+// // * 1. Store the message-el paragraph in a variable called message
+// let messageEl = document.getElementById("message-el")
+// // console.log(messageEl)
+// //* 2. Store the sum paragraph in a variable called sumEl
+// //let sumEl = document.getElementById("sum-el")
+// let sumEl = document.querySelector(".sum-el")
+// //* 2.Store the cards paragraph in a variable called cardsEl
+// let cardsEl = document.getElementById("cards-el")
+// //* Log it out the check that you're doing it right
+// // console.log(isAlive)
+// // console.log(cards)
 
-//*Object in JavaScripts
-let player = {
-     name:  "Elmar",
-     chips:  145
-}
-let playerEl = document.getElementById("player-el")
+// //*Object in JavaScripts
+// let player = {
+//      name:  "Elmar",
+//      chips:  145
+// }
+// let playerEl = document.getElementById("player-el")
 
-playerEl.textContent = player.name + ": $" +  player.chips
-//* 3. Log it out !
-
-
-//* Create a function, getRandomCard(), that always returns the number 5
+// playerEl.textContent = player.name + ": $" +  player.chips
+// //* 3. Log it out !
 
 
-//* Make this function return a random number between 1 and 13
-function getRandomCard(){
-    //* if 1   -> return 11
-    //* if 11 - 13  return 10
-    let randomCard =  Math.floor(Math.random() * 13) + 1
-    if(randomCard > 10) {
-        return 10
-    }  else if (randomCard === 1) {
-        return 11
-    } else {
-        return randomCard
-    }
-    return randomCard; 
-}
-
-//* Create a new fucntion called function startGame() that calls renderGame()
-function startGame() {
-        isAlive = true
-        let firstCard = getRandomCard()
-        let secondCard = getRandomCard()
-        cards = [firstCard, secondCard]
-        sum =  firstCard + secondCard
-    //* Generate two random numbers
-    //* Re-assign the cards and sum variables so that the game can start
-    renderGame()
-}
-
-function renderGame() {
-    //* 3. Render the sum on the  page using this format  -> "Sum:14"
-    if (sum <= 20) {
-        message = ("Do you want to draw new card ? ")
-    } else if (sum === 21) {
-        message = ("You've got the Blacjack! ")
-        hasBlackJack = true
-    } else {
-        message = ("You're out of the game! ")
-        isAlive = false
-    }
-    // console.log(message)
-    //* 2. Display the message in the messageEl using messageEl
-    messageEl.innerText = message
-    sumEl.innerText = "Sum: " + sum
-    //* Render the cards on  the page using this format -> "Cards: 10 4"
-    cardsEl.textContent = "Cards: " 
-
-    //* Creaete a loop that renders out all the cards instead of just two
-    for(let i = 0; i < cards.length; i++) {
-        cardsEl.textContent += cards[i] + " "
-    }
-
-}
+// //* Create a function, getRandomCard(), that always returns the number 5
 
 
-function newCard() {
+// //* Make this function return a random number between 1 and 13
+// function getRandomCard(){
+//     //* if 1   -> return 11
+//     //* if 11 - 13  return 10
+//     let randomCard =  Math.floor(Math.random() * 13) + 1
+//     if(randomCard > 10) {
+//         return 10
+//     }  else if (randomCard === 1) {
+//         return 11
+//     } else {
+//         return randomCard
+//     }
+//     return randomCard; 
+// }
 
-    //* 1. Create a card variable, and hard code its value to a number (2-11)
+// //* Create a new fucntion called function startGame() that calls renderGame()
+// function startGame() {
+//         isAlive = true
+//         let firstCard = getRandomCard()
+//         let secondCard = getRandomCard()
+//         cards = [firstCard, secondCard]
+//         sum =  firstCard + secondCard
+//     //* Generate two random numbers
+//     //* Re-assign the cards and sum variables so that the game can start
+//     renderGame()
+// }
 
-    //* 3. Use the getRandomCard() to set the value of card
+// function renderGame() {
+//     //* 3. Render the sum on the  page using this format  -> "Sum:14"
+//     if (sum <= 20) {
+//         message = ("Do you want to draw new card ? ")
+//     } else if (sum === 21) {
+//         message = ("You've got the Blacjack! ")
+//         hasBlackJack = true
+//     } else {
+//         message = ("You're out of the game! ")
+//         isAlive = false
+//     }
+//     // console.log(message)
+//     //* 2. Display the message in the messageEl using messageEl
+//     messageEl.innerText = message
+//     sumEl.innerText = "Sum: " + sum
+//     //* Render the cards on  the page using this format -> "Cards: 10 4"
+//     cardsEl.textContent = "Cards: " 
 
-    //* Only allow the player to get a new card if she isALive and does not have blackJack
-    if(isAlive === true &&  hasBlackJack === false) {
-        let card = getRandomCard()
-        //* 2. Add the new card to the sum variable
-        sum += card
-        //* 3. Call startGame()
-        //* Push the card to the  cards array
-        cards.push(card)
-        renderGame()
-    } 
+//     //* Creaete a loop that renders out all the cards instead of just two
+//     for(let i = 0; i < cards.length; i++) {
+//         cardsEl.textContent += cards[i] + " "
+//     }
 
-}   
+// }
+
+
+// function newCard() {
+
+//     //* 1. Create a card variable, and hard code its value to a number (2-11)
+
+//     //* 3. Use the getRandomCard() to set the value of card
+
+//     //* Only allow the player to get a new card if she isALive and does not have blackJack
+//     if(isAlive === true &&  hasBlackJack === false) {
+//         let card = getRandomCard()
+//         //* 2. Add the new card to the sum variable
+//         sum += card
+//         //* 3. Call startGame()
+//         //* Push the card to the  cards array
+//         cards.push(card)
+//         renderGame()
+//     } 
+
+// }   
 
 
 
@@ -437,3 +437,139 @@ function newCard() {
 // }
 //     console.log(castleInfo.name)
 //     console.log(castleInfo["price"])
+
+//! Practice time First Object in JavaScripts
+
+//* Create a person object that contains three keys: name, age , and country
+// let person = {
+//     name: "Elmar",
+//     age : 28,
+//     country: "Canada"
+
+// }
+// //* Use yourself as an example to set  the values for name, age , and country
+
+// //* Create a function, logData(), that uses the persons object to create a
+// function logData() {
+//     console.log(person.name + " is " + person.age +  " " + " years old and live in " + " " + person.country)
+// }
+// //* string in the following format:
+
+// //* "Per is 35 years old and lives in Norway"
+
+// //* Call console.log() function to verify that it works
+// console.log(logData())
+
+//! IF else training
+
+let age = 66
+
+//* less than 6 years old -> free
+//* 6 to 17 years old    -> child discount
+//* 18 to 25 years old  -> student discount 
+//* 27 to 66 years old  -> full price 
+//* over 66 years old -> senior citizen discount
+
+//*Create a conditional statement (if/else/else if) that logs out the discount
+//* the passenger will get based upon the value of the age variable 
+
+// if (age < 6) {
+//     console.log("free to go")
+// } else if (age < 18) {
+//     console.log("child discount")
+// } else if (age < 26) {
+//     console.log("student discoutn")
+// } else if (age < 67) {
+//     console.log("full price")
+// }
+// else {
+//     console.log("senior citizen discount")
+// }
+
+
+//! Loop and arrays 
+
+// let largestCountries   = ["China", "India" , "USA", "Indonesia", "Pakistan"]
+
+//* Use a for loop to log the following  to the cosnole:
+/* 
+//* The 5 largest contries in the world:
+  //*  - China
+  //* - India
+  //* - United-States
+  //* - Indonesia
+  //* Pakistan
+*/
+
+// for(let i = 0; i < largestCountries.length; i++) {
+//         console.log(largestCountries[i])
+// }
+
+//! push, pop, unshift, shift challange
+
+let largestCountries   = ["Tuvalu", "India" , "USA", "Indonesia", "Monaco"]
+
+//* You need to help me fixup the largestCountries array so that
+//* China and Pakistan are added back into their perspective places 
+
+//* Use push(), & pop() and their counterpart unshift() & shift() //* unshift() makes array longer, 
+//* Google how to use unshif() and shif()
+
+// largestCountries.pop()
+// largestCountries.push("Pakistan")
+// largestCountries.shift()
+// largestCountries.unshift("China")
+// console.log(largestCountries)
+
+
+//! Logical Operators challange
+
+let dayOfMonth = 13
+let weekDay  = "Friday"
+
+//* If it is Friday the 13th, log out this spooky face:😱
+//* Use the logical "AND" operator" -> &&
+
+// if(weekDay && dayOfMonth) {
+//         console.log("😱")
+// }
+
+//* Rock papers scissors
+
+let hands = ["rock", "paper", "scissors"]
+
+//* Create a fucntion that returns a random item from the array
+
+// function rock(){
+
+//     let randomIndex = Math.floor( Math.random() * 3) 
+
+//     return hands[randomIndex]
+// }
+
+// console.log(rock())
+
+
+//* Sorting fruits
+
+let fruit  = ["🍎", "🍊", "🍎", "🍎","🍊"]
+
+let appleShelf = document.getElementById("apple-shelf")
+let orangeShelf = document.getElementById("orange-shelf")
+
+//* Create a function that puts the apples onto the appleShelf
+//* and the oranges onto the orangeShelf.Use a for loop
+//* conditional statements, and the textContent property
+
+
+function sortFruit() {
+        for(let i=0; i < fruit.length; i++){
+            if(fruit[i] === "🍎") {
+                appleShelf.textContent +=  "🍎"
+            } else if(fruit[i] === "🍊") {
+                orangeShelf.textContent += "🍊"
+            }
+        }
+}
+
+sortFruit()
